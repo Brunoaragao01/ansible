@@ -5,5 +5,5 @@
   tasks:
     - name: YUM | Install packages
       yum: name={{ packages }} state=latest
-      when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+      when: ansible_distribution == "Rocky" or  ansible_distribution_file_variety == "RedHat"
 ...
