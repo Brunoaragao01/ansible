@@ -21,7 +21,7 @@
     - name: SISOP | Disable SELINUX
       replace:
         dest=/etc/selinux/config
-        regexp='SELINUX=enforcing'
+        regexp='SELINUX=permissive'
         replace='SELINUX=disabled'
       tags: selinux
 
