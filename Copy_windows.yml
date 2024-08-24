@@ -6,7 +6,8 @@
     - name: COPY  FILE | temp > documents
       ansible.builtin.win_copy:
         src: C:\temp\teste.txt
-        dest: C:\Users\bruno\Documents\teste.txt
+        dest: C:\temp\teste2.txt
+        remote_src: yes
 ...
 
 
