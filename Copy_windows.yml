@@ -1,0 +1,12 @@
+---
+
+- name: Copy temp > documents
+  hosts: all
+  tasks:
+    - name: COPY  FILE | temp > documents
+      ansible.builtin.win_copy:
+        src: C:\temp\teste.txt
+        dest: C:\Users\bruno\Documents\teste.txt
+...
+
+
