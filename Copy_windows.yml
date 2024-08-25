@@ -6,8 +6,10 @@
     - name: COPY  FILE | temp > documents
       ansible.builtin.win_copy:
         src: C:\temp\teste.txt
-        dest: C:\temp\teste2.txt
-        remote_src: yes
+        #src: C:\temp\"{{ ansible_facts['date_time']['date'] }}".log
+        dest: \\LAPTOP-1A49H3L2\Users\Public\Documents\bkp\"{{ ansible_facts['date_time']['date'] }}".log
+        
 ...
+
 
 

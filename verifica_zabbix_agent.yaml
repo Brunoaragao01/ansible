@@ -1,0 +1,12 @@
+---
+
+- name: Verificando serviço zabbix
+  hosts: all
+  tasks:
+    - name: Verificando e garantindo que o serviço zabbix estará em running
+      ansible.builtin.win_service:
+        name: 'Zabbix Agent'
+        state: started
+        start_mode: auto
+
+...
