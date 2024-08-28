@@ -2,6 +2,8 @@
 
 - name: Zip de Logs
   hosts: all
+  collections:
+    - name: community.windows
   tasks:
     - name: Zipando logs da pasta temp
       community.windows.win_zip:
