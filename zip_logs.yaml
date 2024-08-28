@@ -4,7 +4,7 @@
   hosts: all
   tasks:
     - name: Zipando logs da pasta temp
-      community.windows.win_zip:
+      win_zip:
         src: c:\temp\file*.*
         dest: c:\temp\file.zip
 
