@@ -6,7 +6,6 @@
     - name: COPY {{origem}}  >>> {{destino}}
       ansible.builtin.win_copy:
         src: '{{ origem }}'
-        #src: C:\temp\"{{ ansible_facts['date_time']['date'] }}".log
         dest: '{{ destino }}'
         
 ...
