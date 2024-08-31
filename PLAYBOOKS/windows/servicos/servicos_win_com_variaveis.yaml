@@ -1,0 +1,12 @@
+---
+
+- name: Verificando servico {{name}}
+  hosts: all
+  tasks:
+    - name: Verificando se o servico {{name}} esta no status {{state}}
+      ansible.builtin.win_service:
+        name: '{{name}}'
+        state: '{{state}}'
+        start_mode: '{{start_mode}}'
+        
+...
