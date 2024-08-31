@@ -1,13 +1,16 @@
 ---
 
 - name: Zip de Logs
-  hosts: all
-  collections:
-    - name: community.windows
+  hosts: windows01
   tasks:
     - name: Zipando logs da pasta temp
       community.windows.win_zip:
-        src: c:\temp\file*.*
-        dest: c:\temp\file.zip
+        src: c:\temp\*
+        dest: c:\file.zip
+
+    - name: Remove a file, if present
+      ansible.windows.win_file:
+        path: C:\Temp\
+        state: absent
 
 ...

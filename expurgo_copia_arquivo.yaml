@@ -1,0 +1,14 @@
+- name: Expurgo e copia do arquivo expocor
+  hosts: windows01
+  tasks:
+  - name: Realizando o Expurgo do arquivo 
+    ansible.windows.win_shell: |
+      $destino = "C:\temp\DESTINO\EXPOR*.TXT"
+      Remove-Item -Path $destino
+
+  - name: Realizando o Expurgo do arquivo 
+    ansible.windows.win_shell: |
+      $atual = Get-Date
+      $destino = "C:\temp\DESTINO\"
+      $Arquivos = Get-ChildItem -Path "C:\temp\ORIGEM\EXPO*.TXT" 
+      foreach ($arquivo in $arquivos) {if($Arquivo.LastWriteTime.Date -eq $atual.Date){Copy-Item $Arquivo -Destination $destino }}  
