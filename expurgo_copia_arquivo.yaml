@@ -1,7 +1,7 @@
 ---
 
 - name: Expurgo e copia do arquivo expocor
-  hosts: windows01
+  hosts: all
   tasks:
     - name: Realizando o Expurgo do arquivo 
       ansible.windows.win_shell: |
