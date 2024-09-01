@@ -5,9 +5,9 @@
   tasks:
     - name: COPY {{origem}}  >>> {{destino}}
       ansible.builtin.win_copy:
-        src: '{{ origem }}'
-        dest: '{{ destino }}'
-        
+        src: '{{origem}}'
+        dest: '{{destino}}'
+        remote_src: true
 ...
 
 
