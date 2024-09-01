@@ -1,0 +1,11 @@
+---
+
+- name: Expurgo {{caminho}}
+  hosts: all
+  tasks:
+    - name: Realizando o Expurgo do {{caminho}}
+      ansible.windows.win_shell: |
+        Remove-Item -Path '{{caminho}}'
+
+
+...
