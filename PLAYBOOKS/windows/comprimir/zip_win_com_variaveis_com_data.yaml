@@ -6,7 +6,7 @@
   tasks:
     - name: zipa arquivos {{origem}}
       ansible.windows.win_shell: |
-        $atual = Get-Date -Format "dd/MM/yyyy-HHmmss"
+        $atual = Get-Date -Format "ddMMyyyy_HHmmss"
         $destino_final="{{destino}}\LOG_$atual.zip"
         Compress-Archive -Path '{{origem}}'  -DestinationPath $destino_final
 
