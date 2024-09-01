@@ -5,10 +5,8 @@
   tasks:
     - name: Realizando a Copia do Arquivo 
       ansible.windows.win_shell: |
-        Copy-Item '{{origem}}' -Destination '{{destino}}' }}  
+        Copy-Item '{{origem}}' -Destination '{{destino}}' 
+
+        
 ...
-
-
-
-
 
