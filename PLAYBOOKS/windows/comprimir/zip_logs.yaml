@@ -1,0 +1,11 @@
+---
+
+- name: Zip de Logs
+  hosts: all
+  tasks:
+    - name: Remove a file, if present
+      ansible.windows.win_file:
+        path: C:\Temp\
+        state: absent
+
+...
