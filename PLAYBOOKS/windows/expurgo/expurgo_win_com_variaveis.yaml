@@ -2,6 +2,7 @@
 
 - name: Expurgo {{caminho}}
   hosts: all
+  gather_facts: False
   tasks:
     - name: Realizando o Expurgo do {{caminho}}
       ansible.windows.win_shell: |

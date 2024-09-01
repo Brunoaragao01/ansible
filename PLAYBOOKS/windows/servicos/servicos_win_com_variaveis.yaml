@@ -2,6 +2,7 @@
 
 - name: Verificando servico {{name}}
   hosts: all
+  gather_facts: False
   tasks:
     - name: Verificando se o servico {{name}} esta no status {{state}}
       ansible.builtin.win_service:
