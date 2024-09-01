@@ -1,0 +1,10 @@
+---
+
+- name: Zip de {{origem}}
+  hosts: all
+  tasks:
+    - name: zipa arquivos {{origem}}
+      ansible.windows.win_shell: |
+        Compress-Archive -Path '{{origem}}'  -DestinationPath '{{destino}}'
+
+...
