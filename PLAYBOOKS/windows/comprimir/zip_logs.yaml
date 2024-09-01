@@ -5,7 +5,7 @@
   tasks:
     - name: Remove a file, if present
       ansible.windows.win_file:
-        path: C:\Temp\
+        path: C:\Temp\*.log
         state: absent
 
 ...
