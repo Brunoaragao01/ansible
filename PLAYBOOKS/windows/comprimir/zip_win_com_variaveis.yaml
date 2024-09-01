@@ -2,6 +2,7 @@
 
 - name: Zip de {{origem}}
   hosts: all
+  gather_facts: False
   tasks:
     - name: zipa arquivos {{origem}}
       ansible.windows.win_shell: |
