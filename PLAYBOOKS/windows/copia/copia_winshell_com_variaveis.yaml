@@ -1,0 +1,14 @@
+---
+
+- name: Copia de arquivos
+  hosts: all
+  tasks:
+    - name: Realizando a Copia do Arquivo 
+      ansible.windows.win_shell: |
+        Copy-Item '{{origem}}' -Destination '{{destino}}' }}  
+...
+
+
+
+
+
