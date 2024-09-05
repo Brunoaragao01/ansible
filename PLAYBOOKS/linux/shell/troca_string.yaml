@@ -1,9 +1,11 @@
 ---
-- name: substituir string
+- name: Replace text in a file
   hosts: all
   gather_facts: False
   tasks:
-    - name: replace in arquivo
-      shell: cd "{{local}}" && sed -i 's/"{{string_procurada}}"/"{{string_substituta}}"/' "{{arquivo}}"
-
+    - name: Replace text
+      replace:
+        path: "{{local}}"
+        regexp: "{{string_procurada}}"
+        replace: "{{string_substituta}}"
 ...
