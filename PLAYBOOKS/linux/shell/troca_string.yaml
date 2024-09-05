@@ -1,8 +1,9 @@
 ---
 - name: substituir string
   hosts: all
+  gather_facts: False
   tasks:
     - name: replace in arquivo
       shell: sed -i 's/"{{string_procurada}}"/"{{string_substituta}}"/' "{{local}}"
 
-      ...
+...
