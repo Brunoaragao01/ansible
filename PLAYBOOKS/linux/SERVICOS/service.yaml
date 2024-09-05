@@ -1,0 +1,14 @@
+---
+
+- name: Service
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: Verificando se o serviço {{ service }} está no status de {{ state }}
+      systemd_service:
+        name: "{{ service }}"
+        state: "{{ state }}"
+        enabled: "{{ enable }}"
+
+
+...

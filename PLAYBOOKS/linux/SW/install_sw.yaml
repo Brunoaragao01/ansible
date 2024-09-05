@@ -1,0 +1,14 @@
+---
+
+- name: Install packages
+  hosts: all
+  tasks:
+    - name: YUM | Packages
+      yum: name={{ package }} state={{ state }}
+      when: ansible_distribution == "Rocky" or  ansible_distribution_file_variety == "RedHat"
+
+    - name: APT | Packages
+      apt: name={{ package }} state={{ state }}
+      when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
+
+...

@@ -1,0 +1,14 @@
+---
+
+- name: Update System
+  hosts: all
+  tasks:
+    - name: YUM | update system 
+      yum: name="*" state="latest"
+      when: ansible_distribution == "Rocky" or  ansible_distribution_file_variety == "RedHat"
+
+    - name: APT | update system 
+      apt: name="*" state="latest"
+      when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
+
+...

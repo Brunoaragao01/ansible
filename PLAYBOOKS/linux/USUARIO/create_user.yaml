@@ -1,0 +1,13 @@
+---
+
+- name: Add new user
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: USER | Add user
+      user:
+        name: "{{ username }}"
+        password: "{{ '{{ password }}' | password_hash('sha512', 'mysecretsalt') }}"
+
+
+...
