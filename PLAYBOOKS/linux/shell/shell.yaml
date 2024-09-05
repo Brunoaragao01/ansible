@@ -4,8 +4,7 @@
   hosts: all
   tasks:
    - name: This command will change the working directory to somedir/
-     ansible.builtin.shell:
-      cmd: "{{comando}}"
+     ansible.builtin.shell: "{{comando}}"
   
 
 
