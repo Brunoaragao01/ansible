@@ -5,7 +5,7 @@
   tasks:
    - name: This command will change the working directory to somedir/
      ansible.builtin.shell:
-      cmd: {{comando}}
+      cmd: "{{comando}}"
   
 
 
