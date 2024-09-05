@@ -1,7 +1,7 @@
 ---
 - name: Replace text in a file
   hosts: all
-  gather_facts: False
+  #gather_facts: False
   tasks:
     - name: Replace text
       replace:
